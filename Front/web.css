@@ -1,0 +1,14 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftraista.com%2Fwp-content%2Fuploads%2F2018%2F03%2FNew-York-Google-map.png&f=1&nofb=1&ipt=a2631ad3ef8fa7267b1049f1de43a7beafb6b10c95349a2b1f669162b5a6c6d7&ipo=images');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+df-messenger {
+  z-index: 999;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}

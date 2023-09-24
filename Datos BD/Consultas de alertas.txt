@@ -1,0 +1,28 @@
+
+show databases;
+create database wheatherstation;
+
+use wheatherstation;
+
+show tables;
+
+select * from station;
+
+select * from sensortype;
+
+select * from alert;
+
+select * from alert_events; 
+#Para una estacion en concreto
+
+#Alarmas activas en Ciudad, Estacion
+SELECT SENSORTYPE.NAME AS tipoalerta, ALERT.DESCRIPTION AS descripcion FROM ALERT INNER JOIN ALERT_EVENTS ON ALERT.ID = ALERT_EVENTS.ALERT_ID 
+													 INNER JOIN SENSORTYPE ON ALERT_EVENTS.SENSORTYPE_ID = SENSORTYPE.ID
+                                                     INNER JOIN STATION ON ALERT_EVENTS.STATION_ID = STATION.ID
+                                                     WHERE ALERT_EVENTS.ACTIVE = 1 AND ALERT_EVENTS.STATION_ID = 1; #Hay que cambiar el 1 por lo que sea de la estación
+
+#Alarmas activas en una ciudad completa
+SELECT SENSORTYPE.NAME AS tipoalerta, ALERT.DESCRIPTION AS descripcion FROM ALERT INNER JOIN ALERT_EVENTS ON ALERT.ID = ALERT_EVENTS.ALERT_ID 
+													 INNER JOIN SENSORTYPE ON ALERT_EVENTS.SENSORTYPE_ID = SENSORTYPE.ID
+                                                     INNER JOIN STATION ON ALERT_EVENTS.STATION_ID = STATION.ID
+                                                     WHERE ALERT_EVENTS.ACTIVE = 1 AND STATION.CITY_ID = 1; #Hay que cambiar el 1 por lo que sea de la ciudad

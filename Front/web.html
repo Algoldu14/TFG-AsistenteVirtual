@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Asistente Virtual Meteorológico</title>
+    <link rel="stylesheet" type="text/css" href="./web.css" />
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      location="europe-west2"
+      agent-id="67d71200-048e-41af-a754-d2c40a6c740e"
+      language-code="es"
+    >
+      <df-messenger-chat-bubble
+        chat-title="Bot-Tiempo"
+        bot-writing-text="Un segundo..."
+        placeholder-text="Escriba aqui..."
+      >
+      </df-messenger-chat-bubble>
+    </df-messenger>
+  </body>
+</html>
